@@ -1,9 +1,83 @@
 .card {
   height: 175px;
   align-items: center;
-  color: wheat;
+  color: white;
+  border-width: 20px;
+  border-radius: 7px;
 }
 
 .hidden {
   display: none;
+}
+
+button {
+  width: 164px;
+}
+
+.player-1-buttons {
+ margin-left: 121px;
+}
+
+.player-2-buttons {
+  margin-left: 237px;
+}
+
+#player-1-score {
+  margin-left: 70px;
+}
+
+#player-2-score {
+  margin-right: 70px;
+}
+
+#play {
+  width: 475px;
+  height: 385px;
+  border-radius: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background-image: url("../img/small-pig.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  border-color: pink;
+  border-width: 19px;
+  color: #ea7b9f;
+  font-family: comic sans MS;
+  font-size: 350%;
+  font-weight: bolder;
+}
+
+h2 {
+  text-align: center;
+  font-size: 350%;
+  font-weight: bolder;
+}
+
+.jumbotron {
+  background-color: pink;
+  color: #ea7b9f;
+}
+
+.bg-pink {
+  background-color: pink;
+}
+
+body {
+  font-family: comic sans MS;
+  background-image: url("../img/meadow.jpg");
+  background-repeat: no-repeat;
+  height: 140%;
+  background-size: cover;
+
+
+
+}
+
+.play-label {
+  color: white;
+}
+
+.hold-label {
+  color: pink;
 }
