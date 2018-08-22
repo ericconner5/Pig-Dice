@@ -8,7 +8,10 @@ var sumPlayer1 = function() {
   var sum = 0;
   for (i=0; i < player1Rolls.length; i++) {
     sum += player1Rolls[i];
-    (player1RollsSum).push(sum);
+    (player1Tracker).push(sum);
+    if (i === player1Rolls.length - 1 ) {
+      $("#player-1-turn-span").text(sum)
+    }
   }
 }
 
@@ -16,20 +19,33 @@ var sumPlayer2 = function() {
   var sum = 0;
   for (i=0; i < player2Rolls.length; i++) {
     sum += player2Rolls[i];
-    (player2RollsSum).push(sum);
+    (player2Tracker).push(sum);
+    if (i === player2Rolls.length - 1 ) {
+      $("#player-2-turn-span").text(sum)
+    }
   }
 }
 
+// Functions Below aren't pushing the proper index value (the last). Fix this, then the whole site will work.
 
+var totalPlayer1 = function() {
+  for (i=i; i < player1Tracker.length; i++)
+  (player1Sum).push(player1Tracker[i])
+  console.log(player1Sum);
+}
+
+var totalPlayer2 = function() {
+
+}
 
 var player1Rolls = []
-
 var player2Rolls = []
 
-var player1RollsSum = []
+var player1Tracker = []
+var player2Tracker = []
 
-var player2RollsSum = []
-
+var player1Sum = []
+var player2Sum = []
 
 
 $(document).ready(function(){
@@ -43,37 +59,32 @@ $(document).ready(function(){
     var roll = d6(1,6)
     $("#player-1-roll-span").text(roll);
     if (roll === 1){
-
       alert("Turns up!")
-  } else {
+      return player1Rolls = []
+    } else {
       (player1Rolls).push(roll);
-
-  }
-
-})
+      sumPlayer1();
+    }
+  })
 
   $("#player-2-roll-button").click(function(){
     var roll = d6(1,6)
     $("#player-2-roll-span").text(roll);
     if (roll === 1){
-
       alert("Turns up!")
-  } else {
+      return player2Rolls = []
+    } else {
       (player2Rolls).push(roll);
-  }
-})
-
+      sumPlayer2();
+    }
+  })
 
   $("#player-1-hold-button").click(function(){
-    sumPlayer1()
-    $("#player-1-score-span").text(player1RollsSum);
-    console.log(player1RollsSum);
+    totalPlayer1()
+
   })
 
   $("#player-2-hold-button").click(function(){
-    sumPlayer2()
-    $("#player-2-score-span").text(player2RollsSum);
+    totalPlayer2()
   })
-
-
 })
