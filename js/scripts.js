@@ -12,7 +12,22 @@ var d6 = function randomInt(min, max) {
 // var roll =
 
 $(document).ready(function(){
-  $(".btn").click(function(){
-    $(".card").append(d6);
+  $("button#play").click(function(){
+    $(".hidden").show();
+    $("button#play").hide();
+  })
+
+
+
+
+
+
+    $("#player-1-roll-button").click(function(){
+    $("#player-1-roll-span").text(d6);
+  })
+
+
+  $("#player-2-roll-button").click(function(){
+    $("#player-2-roll-span").text(d6);
   })
 })
