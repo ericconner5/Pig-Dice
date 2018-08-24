@@ -1,3 +1,9 @@
+html {
+  height: 100%;
+  width:100%;
+
+}
+
 .card {
   height: 175px;
   align-items: center;
@@ -8,11 +14,36 @@
 
 .hidden {
   display: none;
+  pointer-events: none;
+}
+.obscured {
+  opacity: 0;
+  pointer-events: none;
+}
+.zoomed-out {
+  opacity: 0;
+  transform: scaleX(1.2) scaleY(1.2);
+  pointer-events: none;
+}
+.off-top {
+  transform: translateY(-300px);
+}
+.main-area {
+  opacity: 0;
+}
+.avatar {
+  width:200px;
+}
+
+#p1-pig {
+  margin-top: 10px;
 }
 
 button {
   width: 164px;
+  margin-bottom:10px;
 }
+
 
 .player-1-buttons {
  margin-left: 121px;
@@ -22,14 +53,19 @@ button {
   margin-left: 237px;
 }
 
+#title-header {
+  transition: all 3000ms ease;
+}
+
 #player-1-score {
   margin-left: 70px;
+  text-align:center;
 }
 
 #player-2-score {
   margin-right: 70px;
+  text-align:center;
 }
-
 #play {
   width: 475px;
   height: 385px;
@@ -46,14 +82,13 @@ button {
   font-family: comic sans MS;
   font-size: 350%;
   font-weight: bolder;
+  transition: all 3000ms ease;
 }
-
 h2 {
   text-align: center;
   font-size: 350%;
   font-weight: bolder;
 }
-
 .jumbotron {
   background-color: pink;
   color: #ea7b9f;
@@ -67,11 +102,8 @@ body {
   font-family: comic sans MS;
   background-image: url("../img/meadow.jpg");
   background-repeat: no-repeat;
-  height: 140%;
+  height: 100%;
   background-size: cover;
-
-
-
 }
 
 .play-label {
@@ -80,4 +112,76 @@ body {
 
 .hold-label {
   color: pink;
+}
+
+#win-screen {
+  position: fixed;
+  width: 80%;
+  margin-left:10%;
+  height: 85%;
+  margin-top:5%;
+  transition: all 1600ms ease;
+}
+#banner {
+  margin-left:0 auto;
+  margin-right:0 auto;
+  width:88%;
+  height:40%;
+  margin-top:10px;
+  text-align:center;
+  background-image: url("../img/banner.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+  text-shadow: 2px 2px 4px pink;
+}
+#winner-name {
+  font-size: 3.5vw;
+  font-weight:bold;
+  /* transform:translateY(-150%); */
+  color: #f77;
+}
+#winner-image {
+  width: 90%;
+  height: 60%;
+  background-image: url("../img/meadow.jpg");
+  background-repeat: no-repeat;
+  margin-bottom: 5%;
+  border: 15px solid #dfa9b2;
+  padding:5%;
+
+}
+#player-1-win-image {
+  height:100%;
+
+}
+#player-2-win-image {
+
+  margin-left:30%;
+  height:100%;
+}
+#banner-text {
+  display:block;
+  margin-top:2%;
+  font-size: 4vw;
+  /* max-height:75px; */
+}
+.tiny {
+  transform: scaleX(0.1) scaleY(0.1)
+}
+#play-again-button {
+  width: 475px;
+  height: 385px;
+  border-radius: 40%;
+  background-image: url("../img/small-pig.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+
+  border-color: #dfa9b2;
+  border-width: 19px;
+  color: white;
+  text-shadow: 2px 2px 4px pink;
+  font-size: 350%;
+  font-weight: bolder;
+  z-index: 12;
 }

@@ -9,74 +9,90 @@
     <title>Pig Dice</title>
   </head>
   <body>
+    <div class="card bg-pink tiny obscured" id="win-screen">
+      <div id="banner" class="row">
+        <div class="col">
+          <span id="banner-text">WINNER!!</span>
+          <div id="winner-name">
+            <!-- winner name goes here -->
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-success" id="play-again-button">Play Again!</button>
+      <div id="winner-image" class="row">
+        <!-- winner image goes here -->
+      </div>
+    </div>
     <div class="container">
-      <div class="jumbotron">
+      <div id="title-header" class="jumbotron off-top">
         <h2>The Dice Game of Pigs</h2>
       </div>
-      <div class="hidden">
+      <div class="main-area hidden">
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-5">
             <div class="card bg-pink" id="player-1-score">
               <p>Score</p>
-              <span id="player-1-score-span"></span>
+              <span id="player-1-score-span">0</span>
             </div>
           </div>
-
-          <div class="col-md">
+          <div class="col">
           </div>
-
-          <div class="col-md-5">
+          <div class="col-5">
             <div class="card bg-pink" id="player-2-score">
               <p>Score</p>
-              <span id="player-2-score-span"></span>
+              <span id="player-2-score-span">0</span>
             </div>
           </div>
         </div>
-
         <br>
-
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-3">
             <div class="card bg-pink" id="player-1-roll">
               <p>Roll</p>
               <span id="player-1-roll-span"></span>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-3">
             <div class="card bg-pink" id="player-1-turn-total">
               <p>Turn Total</p>
               <span id="player-1-turn-span"></span>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-3">
+            <div class="card bg-pink" id="player-2-roll">
+              <p>Roll</p>
+              <span id="player-2-roll-span"></span>
+            </div>
+          </div>
+          <div class="col-3">
             <div class="card bg-pink" id="player-2-turn-total">
               <p>Turn Total</p>
               <span id="player-2-turn-span"></span>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card bg-pink" id="player-2-roll">
-                <p>Roll</p>
-                <span id="player-2-roll-span"></span>
-            </div>
-          </div>
         </div>
-
         <br>
-
         <div class="row">
-          <button class="btn btn-danger" id="play">Play</button>
-
           <div class="player-1-buttons">
-            <button class="btn bg-pink" id="player-1-roll-button"><span class="play-label">Roll</span></button>
+            <button class="btn bg-pink roll-button" id="player-1-roll-button"><span class="play-label">Roll</span></button>
             <button class="btn btn-secondary" id="player-1-hold-button">Hold</button>
           </div>
           <div class="player-2-buttons">
-            <button class="btn bg-pink" id="player-2-roll-button"><span class="play-label">Roll</span></button>
+            <button class="btn bg-pink roll-button" id="player-2-roll-button"><span class="play-label">Roll</span></button>
             <button class="btn btn-secondary" id="player-2-hold-button">Hold</button>
           </div>
         </div>
+        <div class="row">
+          <div style="text-align:center" class="col-6">
+            <img class="avatar" src="img/pig1.png" alt="An adorable pig" id="player-1-avatar">
+          </div>
+          <div style="text-align:center" class="col-6">
+            <img class="avatar" src="img/pig2.png" alt="Another adorable pig" id="player-2-avatar">
+          </div>
+        </div>
       </div>
-      <button class="btn btn-danger" id="play">Play</button>
+      <button class="btn btn-danger zoomed-out" id="play">Play</button>
+
     </div>
+
   </body>
