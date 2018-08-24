@@ -1,11 +1,10 @@
-var d6 = function randomInt(min, max) {
-  min = Math.ceil(1);
-  max = Math.floor(6);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+var d6 = function() {
+  return Math.floor(Math.random() * 6 + 1);
 }
 var sumArray = function(array) {
-  var sum = array.reduce(getSum)
-  console.log("sum " + sum)
+  var sum = array.reduce(function(total, num) {
+    return total + num;
+  })
   return sum
 }
 var rolls = {
@@ -135,7 +134,4 @@ function Game() {
       opacity: 0
     },1000)
   }
-}
-function getSum(total, num) {
-  return total + num;
 }
